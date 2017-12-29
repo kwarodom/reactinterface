@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var AptList = require('./AptList');
+var AddAppointment = require('./AddAppointment');
 var _ = require('lodash');
 
 var MainInterface = React.createClass({
@@ -45,6 +46,7 @@ var MainInterface = React.createClass({
         }.bind(this)); //filteredApts.map
         return (
             <div className="interface">
+                <AddAppointment />
                 <ul className="item-list media-list">{filteredApts}</ul>
             </div>
         ) //return
