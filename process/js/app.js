@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var AptList = require('./AptList');
+var _ = require('lodash');
 
 var MainInterface = React.createClass({
     getInitialState: function() {
@@ -22,13 +23,23 @@ var MainInterface = React.createClass({
         this.serverRequest.abort();
     },
 
+    deleteMessage: function (item) {
+        var allApts = this.state.myAppointments;
+        var newApts = _.without(allApts, item);
+        this.setState({
+            myAppointments: newApts
+        }); // setState
+    }, // deleteMessage
+
     render: function() {
         var filteredApts = this.state.myAppointments;
         filteredApts = filteredApts.map(function(item, index) {
             return(
                 <AptList
-                    key={index}
-                    singleItem={item}
+                    key={ index }
+                    singleItem={ item }
+                    whichItem={ item }
+                    onDelete={ this.deleteMessage }
                 />
             ) //return
         }.bind(this)); //filteredApts.map
