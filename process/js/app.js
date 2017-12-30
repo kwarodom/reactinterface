@@ -52,6 +52,13 @@ var MainInterface = React.createClass({
         }); //setState
     }, //addItem
 
+    reOrder: function (orderBy, orderDir) {
+        this.setState({
+            orderBy: orderBy,
+            orderDir: orderDir
+        })
+    },
+
     render: function() {
         var filteredApts = this.state.myAppointments;
         var orderBy = this.state.orderBy;
@@ -79,6 +86,7 @@ var MainInterface = React.createClass({
                 <SearchAppointments
                     orderBy = { this.state.orderBy }
                     orderDir = { this.state.orderDir }
+                    onReOrder = { this.reOrder }
                 />
                 <ul className="item-list media-list">{filteredApts}</ul>
             </div>
