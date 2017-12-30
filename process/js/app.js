@@ -4,15 +4,15 @@ var _ = require('lodash');
 
 var AptList = require('./AptList');
 var AddAppointment = require('./AddAppointment');
-var SearchAppointment = require('./SearchAppointments');
+var SearchAppointments = require('./SearchAppointments');
 
 var MainInterface = React.createClass({
     getInitialState: function() {
         return {
             aptBodyVisible: false,
-            myAppointments: [],
             orderBy: 'petName',
             orderDir: 'asc',
+            myAppointments: []
         } //return
     }, //getInitialState
 
@@ -57,9 +57,9 @@ var MainInterface = React.createClass({
         var orderBy = this.state.orderBy;
         var orderDir = this.state.orderDir;
 
-        filteredApts = _.orderBy(filteredApts, function (item) {
+        filteredApts = _.orderBy(filteredApts, function(item) {
             return item[orderBy].toLowerCase();
-        }, orderDir);
+        }, orderDir);//orderBy
 
         filteredApts = filteredApts.map(function(item, index) {
             return(
@@ -76,7 +76,7 @@ var MainInterface = React.createClass({
                     handleToggle = { this.toggleAddDisplay }
                     addApt = { this.addItem }
                 />
-                <SearchAppointment
+                <SearchAppointments
                     orderBy = { this.state.orderBy }
                     orderDir = { this.state.orderDir }
                 />

@@ -17,5 +17,9 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "reactify": "^1.1.1"
+  },
+  "dependencies": {
+    "popper.js": "^1.12.9",
+    "tooltip.js": "^1.1.7"
   }
 }
