@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b263761a-f3d1-4a15-9cf0-c8497a08c623" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/builds/app/js/app.js" afterPath="$PROJECT_DIR$/builds/app/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/process/js/AddAppointment.js" afterPath="$PROJECT_DIR$/process/js/AddAppointment.js" />
       <change beforePath="$PROJECT_DIR$/process/js/app.js" afterPath="$PROJECT_DIR$/process/js/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,21 +17,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AddAppointment.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddAppointment.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/js/AddAppointment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1177">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearchAppointments.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process/js/SearchAppointments.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="415">
+              <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -60,8 +68,8 @@
       <find>showTitle</find>
       <find>this.state.data</find>
       <find>item-</find>
-      <find>class</find>
       <find>form</find>
+      <find>class</find>
     </findStrings>
     <replaceStrings>
       <replace>this.state.myAppointments</replace>
@@ -81,6 +89,7 @@
         <option value="$PROJECT_DIR$/builds/app/index_backup.html" />
         <option value="$PROJECT_DIR$/process/js/AptList.js" />
         <option value="$PROJECT_DIR$/process/js/AddAppointment.js" />
+        <option value="$PROJECT_DIR$/process/js/SearchAppointments.js" />
         <option value="$PROJECT_DIR$/process/js/app.js" />
       </list>
     </option>
@@ -190,7 +199,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18426000" />
+    <option name="totallyTimeSpent" value="19168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="23" width="1614" height="1027" extended-state="6" />
@@ -259,14 +268,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/builds/app/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-242">
@@ -579,18 +580,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/js/app.js">
+    <entry file="file://$PROJECT_DIR$/process/js/AddAppointment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/js/AddAppointment.js">
+    <entry file="file://$PROJECT_DIR$/process/js/SearchAppointments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
           <folding />
         </state>
       </provider>
