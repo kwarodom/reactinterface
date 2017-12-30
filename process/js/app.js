@@ -10,7 +10,9 @@ var MainInterface = React.createClass({
     getInitialState: function() {
         return {
             aptBodyVisible: false,
-            myAppointments: []
+            myAppointments: [],
+            orderBy: 'petName',
+            orderDir: 'asc',
         } //return
     }, //getInitialState
 
@@ -52,6 +54,13 @@ var MainInterface = React.createClass({
 
     render: function() {
         var filteredApts = this.state.myAppointments;
+        var orderBy = this.state.orderBy;
+        var orderDir = this.state.orderDir;
+
+        filteredApts = _.orderBy(filteredApts, function (item) {
+            return item[orderBy].toLowerCase();
+        }, orderDir);
+
         filteredApts = filteredApts.map(function(item, index) {
             return(
                 <AptList key = { index }
@@ -67,7 +76,10 @@ var MainInterface = React.createClass({
                     handleToggle = { this.toggleAddDisplay }
                     addApt = { this.addItem }
                 />
-                <SearchAppointment />
+                <SearchAppointment
+                    orderBy = { this.state.orderBy }
+                    orderDir = { this.state.orderDir }
+                />
                 <ul className="item-list media-list">{filteredApts}</ul>
             </div>
         ) //return
