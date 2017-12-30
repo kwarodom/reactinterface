@@ -1,14 +1,15 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var _ = require('lodash');
+
 var AptList = require('./AptList');
 var AddAppointment = require('./AddAppointment');
-var _ = require('lodash');
 
 var MainInterface = React.createClass({
     getInitialState: function() {
         return {
-            myAppointments: [],
-            aptBodyVisible: false
+            aptBodyVisible: false,
+            myAppointments: []
         } //return
     }, //getInitialState
 
@@ -19,44 +20,51 @@ var MainInterface = React.createClass({
                 myAppointments: tempApts
             }); //setState
         }.bind(this));
-    },
+    }, //componentDidMount
 
     componentWillUnmount: function() {
         this.serverRequest.abort();
-    },
+    }, //componentWillUnmount
 
-    deleteMessage: function (item) {
+    deleteMessage: function(item) {
         var allApts = this.state.myAppointments;
         var newApts = _.without(allApts, item);
         this.setState({
             myAppointments: newApts
-        }); // setState
-    }, // deleteMessage
+        }); //setState
+    }, //deleteMessage
 
-    toggleAddDisplay: function () {
+    toggleAddDisplay: function() {
         var tempVisibility = !this.state.aptBodyVisible;
         this.setState({
             aptBodyVisible: tempVisibility
-        })
-    },
+        }); //setState
+    }, //toggleAddDisplay
+
+    addItem: function(tempItem) {
+        var tempApts = this.state.myAppointments;
+        tempApts.push(tempItem);
+        this.setState({
+            myAppointments: tempApts
+        }); //setState
+    }, //addItem
 
     render: function() {
         var filteredApts = this.state.myAppointments;
         filteredApts = filteredApts.map(function(item, index) {
             return(
-                <AptList
-                    key={ index }
-                    singleItem={ item }
-                    whichItem={ item }
-                    onDelete={ this.deleteMessage }
-                />
+                <AptList key = { index }
+                         singleItem = { item }
+                         whichItem = { item }
+                         onDelete = { this.deleteMessage } />
             ) //return
         }.bind(this)); //filteredApts.map
         return (
             <div className="interface">
                 <AddAppointment
-                    bodyVisible={ this.state.aptBodyVisible }
+                    bodyVisible = { this.state.aptBodyVisible }
                     handleToggle = { this.toggleAddDisplay }
+                    addApt = { this.addItem }
                 />
                 <ul className="item-list media-list">{filteredApts}</ul>
             </div>
